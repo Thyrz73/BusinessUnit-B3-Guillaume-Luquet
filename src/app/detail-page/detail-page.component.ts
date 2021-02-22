@@ -25,8 +25,6 @@ export class DetailPageComponent implements OnInit {
   
 
   ngOnInit(): void {
-    console.log(this.formModif.value)
-    console.log(this.selected)
   }
 
 }

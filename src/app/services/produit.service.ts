@@ -49,8 +49,6 @@ export class ProduitService {
   }
 
   onSubmit(){
-    console.log(this.formModif.value);
-
     let newProduit = new Produit();
     newProduit= this.formModif.value;
     this.produitList.push(newProduit);
@@ -60,8 +58,7 @@ export class ProduitService {
     for (let productList in this.produitList){
       if  (this.selected == this.produitList[productList]){
         this.produitList[productList] = this.formModif.value;
-        console.log(this.formModif.value);
-        console.log(this.produitList);
+
       }
     }
   }

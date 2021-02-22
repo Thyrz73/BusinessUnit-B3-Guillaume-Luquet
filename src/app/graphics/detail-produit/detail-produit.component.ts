@@ -26,7 +26,7 @@ export class DetailProduitComponent implements OnInit {
     
     this._productServ.selected = product;
     this._productServ.formModif.setValue(this._productServ.selected);
-    console.log(this._productServ.formModif.value);
+
   
   }
 

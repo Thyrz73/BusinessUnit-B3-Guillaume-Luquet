@@ -7,7 +7,7 @@
         <div class="wrap-contact2-form-btn">
             <div class="contact2-form-bgbtn"></div>
                 <a routerLink="detail-produit" routerLinkActive="active" > 
-                    <button class="contact2-form-btn" color="accent" (click)="this.interfServ.modifiedToggle(); this.interfServ.pageToggle(); this.produitService.clearForm()"> {{this.interfServ.pageToggle()? 'Afficher la liste des produits': 'Retour à la liste des produits'}} </button>
+                    <button class="contact2-form-btn" color="accent" (click)="this.interfServ.pageToggle(); this.interfServ.modifiedToggle();  this.produitService.clearForm()"> {{this.interfServ.pageToggle()? 'Afficher la liste des produits': 'Retour à la liste des produits'}} </button>
                 </a>
         </div>
     </div>
