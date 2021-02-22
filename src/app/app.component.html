@@ -1,0 +1,19 @@
+<br>
+<h1 style="text-align: center; font-size: 50px;">Buisness App</h1>
+
+
+<div style="margin: auto" class="wrap-contact2">
+    <div class="container-contact2-form-btn">
+        <div class="wrap-contact2-form-btn">
+            <div class="contact2-form-bgbtn"></div>
+                <a routerLink="detail-produit" routerLinkActive="active" > 
+                    <button class="contact2-form-btn" color="accent" (click)="this.interfServ.modifiedToggle(); this.interfServ.pageToggle(); this.produitService.clearForm()"> {{this.interfServ.pageToggle()? 'Afficher la liste des produits': 'Retour à la liste des produits'}} </button>
+                </a>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+
+

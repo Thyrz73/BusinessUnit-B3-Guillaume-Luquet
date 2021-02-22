@@ -1,0 +1,55 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="margin: auto" class="wrap-contact2">
+    <h3>Liste des produits : </h3>
+
+    
+        <a  routerLink="./detail-page" routerLinkActive="active">
+            <li *ngFor="let product of produitList"  (click)="selectedProd($event ,product); this.interfServ.pageToggle()"> 
+                <span>{{product.nom}} &nbsp; &nbsp;</span> 
+
+            </li>
+        </a>
+    
+</div>
+
+<div style="margin: auto" class="wrap-contact2">
+    <form class="contact2-form" [formGroup]="formModif" (ngSubmit)="this._productServ.onSubmit()">
+        <span class="contact2-form-title">
+            Ajouter un produit
+        </span>
+
+        <div class="wrap-input2 label" > Nom : 
+            <input class="input2" formControlName="nom">
+            <span class="focus-input2"></span>
+        </div>
+    
+    
+        <div class="wrap-input2 label" > Texture : 
+            <input class="input2" formControlName="texture">
+            <span class="focus-input2"></span>
+        </div>
+    
+    
+        <div class="wrap-input2 label" > Grammage : 
+            <input class="input2" formControlName="grammage">
+            <span class="focus-input2"></span>
+        </div>
+    
+    
+        <div class="wrap-input2 label" > Couleur : 
+            <input class="input2" formControlName="couleur">
+            <span class="focus-input2"></span>
+        </div>
+    
+    
+        <div class="container-contact2-form-btn">
+            <div class="wrap-contact2-form-btn">
+                <div class="contact2-form-bgbtn"></div>
+                    <button class="contact2-form-btn" color="accent" type="submit"> Ajouter </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+

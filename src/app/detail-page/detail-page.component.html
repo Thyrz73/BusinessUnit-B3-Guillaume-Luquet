@@ -1,0 +1,62 @@
+<div style="margin: auto" class="wrap-contact2" [formGroup]="formModif">
+    <div> <h3>Detail du produit :</h3></div>
+    <p>Name : {{selected.nom}} </p>
+    <p>Texture : {{selected.texture}} </p>
+    <p>Grammage : {{selected.grammage}} </p>
+    <p> Couleur : {{selected.couleur}} </p>
+    <div class="content">
+
+
+        <div style="margin: auto" class="wrap-contact2">
+            <form class="contact2-form" [formGroup]="formModif" (ngSubmit)="this._productServ.update(this._productServ.selected); this.interfServ.modifiedToggle()" class="formUpdate">
+                <span class="contact2-form-title">
+                    Ajouter ou modifier un produit
+                </span>
+
+                    <div class="wrap-input2 label" > Nom : 
+                        <input class="input2" formControlName="nom" [value]="selected.nom">
+                        <span class="focus-input2"></span>
+                    </div>
+                
+                
+                    <div class="wrap-input2 label" > Texture : 
+                        <input class="input2" formControlName="texture" [value]="selected.texture">
+                        <span class="focus-input2"></span>
+                    </div>
+                
+                
+                    <div class="wrap-input2 label" > Grammage : 
+                        <input class="input2" formControlName="grammage" [value]="selected.grammage">
+                        <span class="focus-input2"></span>
+                    </div>
+                
+                
+                    <div class="wrap-input2 label" > Couleur : 
+                        <input class="input2" formControlName="couleur" [value]="selected.couleur">
+                        <span class="focus-input2"></span>
+                    </div>
+                
+                    
+                    <div class="container-contact2-form-btn">
+                        <div class="wrap-contact2-form-btn">
+                            <div class="contact2-form-bgbtn"></div>
+                            <button class="contact2-form-btn" color="warn" type="submit" [formGroup]="formModif"  > Modifier </button>
+                        </div>
+                    </div>
+            
+            
+    
+        </form>
+        
+        <div class="container-contact2-form-btn">
+            <div class="wrap-contact2-form-btn">
+                <div class="contact2-form-bgbtn"></div>
+                <button class="contact2-form-btn" (click)="this._productServ.onSubmit()">Ajouter</button>
+            </div>
+        </div>
+        
+
+        </div>
+    </div>
+</div>
+
